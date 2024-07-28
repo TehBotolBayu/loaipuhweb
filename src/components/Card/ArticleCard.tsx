@@ -1,4 +1,4 @@
-import React from "react";
+
 // import NormalButton from "../Global/Button/NormalButton";
 
 const ArticleCard = (
@@ -26,7 +26,7 @@ const ArticleCard = (
               {desc}
             </p>
             <p className="underline">
-              Selengkapnya
+              Selengkapnya {url}
             </p>
           </div>
         </div>
