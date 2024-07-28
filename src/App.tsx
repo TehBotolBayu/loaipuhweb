@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import heroImage from "./asset/maskot.png";
 import kades from "./asset/kades.png";
 import logo from "./asset/logo.png";
@@ -13,7 +13,6 @@ import MapComponent from "./components/Map/Landing";
 function App() {
   const [win, setWindow] = useState<any>(0)
   const [openNavBar, setopenNavBar] = useState(false)
-  const logoRef = useRef();
 
   useEffect(()=>{
     const handle = () => {
