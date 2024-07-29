@@ -1,30 +1,25 @@
-// src/MapComponent.js
+import { useMemo } from "react";
+import SectionTitle from "../../SectionTitle";
+import dynamic from "next/dynamic";
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-
-// Fix for default icon path issues in create-react-app
-// delete L.Icon.Default.prototype._getIconUrl;
-// L.Icon.Default.mergeOptions({
-//   iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-//   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-//   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-// });
-
-const MapComponent = () => {
+const MapSection = () => {
+  const MapComponent = useMemo(
+    () =>
+      dynamic(() => import("../utils"), {
+        loading: () => <p>A map is loading</p>,
+        ssr: false,
+      }),
+    []
+  );
   return (
-    <MapContainer center={[-0.423112, 116.953489]} zoom={20} className='z-10 h-[70vh] lg:h-[50vh] w-full'>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={[-0.423112, 116.953489]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <section className="bg-gray-100 py-8">
+      <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <SectionTitle text="Peta Desa" opt={undefined} />
+        <div className="mt-14"></div>
+        <MapComponent />
+      </div>
+    </section>
   );
 };
 
-export default MapComponent;
+export default MapSection;

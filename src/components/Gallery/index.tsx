@@ -1,92 +1,17 @@
+import GalleryGrid from './GalleryGrid'
+import SectionTitle from '../SectionTitle'
 
-
-const index = () => {
+const GallerySection = () => {
   return (
-    <>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <div className="flex flex-col">
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset/1722124013444.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4 "
-              src="./src/asset/1722124013463.jpg"
-              alt="gallery-photo"
-            />
-          </div>
+    <section className="bg-gray-100 py-8">
+    <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+    <SectionTitle text="Galeri" opt={undefined} />
 
-        </div>
-        <div className="flex flex-col">
-        <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset//1722124013481.jpg"
-              alt="gallery-photo"
-            />
-          </div>
+      <div className="mt-14"></div>
+      <GalleryGrid />
+    </div>
+  </section>
+  )
+}
 
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset//1722124013525.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4 "
-              src="./src/asset//1722124013546.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset//1722124013562.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4 "
-              src="./src/asset//1722124013576.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset//1722124013591.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4"
-              src="./src/asset//1722124013606.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg object-cover object-center mb-4  "
-              src="./src/asset//1722124013502.jpg"
-              alt="gallery-photo"
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default index;
+export default GallerySection
