@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.22.9",
     "@types/geojson": "^7946.0.14",
+    "contentful": "^10.12.15",
+    "dotenv": "^16.4.5",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "14.2.5",
@@ -18,6 +21,7 @@
     "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
+    "@contentful/rich-text-types": "^16.8.3",
     "@types/leaflet": "^1.9.12",
     "@types/node": "^20",
     "@types/react": "^18",

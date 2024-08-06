@@ -18,3 +18,34 @@
   opacity: 0.3;
   /* background-size: 100vw 100vh; */
 }
+
+h1{
+  @apply font-bold text-3xl
+}
+h2{
+  @apply font-bold text-2xl
+}
+h3{
+  @apply font-bold text-xl
+}
+h4{
+  @apply font-bold text-lg
+}
+h5{
+  @apply font-bold text-base
+}
+h6{
+  @apply font-bold text-base
+}
+
+table{
+  @apply bg-red-500
+}
+
+ul {
+  @apply list-disc
+}
+
+ol {
+  @apply list-decimal
+}
