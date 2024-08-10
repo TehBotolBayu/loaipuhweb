@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
@@ -39,7 +43,19 @@ h6{
 }
 
 table{
-  @apply bg-red-500
+  @apply border border-black
+}
+
+th{
+  @apply border border-black
+}
+
+tr{
+  @apply border border-black
+}
+
+td{
+  @apply border border-black
 }
 
 ul {

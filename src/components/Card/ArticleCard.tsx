@@ -1,10 +1,21 @@
-
 // import NormalButton from "../Global/Button/NormalButton";
 
-const ArticleCard = (
-  {image, title, desc, url}:
-  {image:string, title:string, desc:string, url:string}
-) => {
+import Link from "next/link";
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
+
+const ArticleCard = ({
+  image,
+  title,
+  desc,
+  url,
+  content,
+}: {
+  image: string;
+  title: string;
+  desc: string;
+  url: string;
+  content: any;
+}) => {
   return (
     <>
       <div className="max-w-md mx-auto w-fit cursor-pointer hover:-translate-y-2 transition-all ease-in-out">
@@ -22,12 +33,11 @@ const ArticleCard = (
                 {title}
               </h5>
             </a>
-            <p className="font-normal text-gray-700 mb-3 text-sm">
-              {desc}
-            </p>
-            <p className="underline">
-              Selengkapnya {url}
-            </p>
+            <p className="font-normal text-gray-700 mb-3 text-sm">{desc}</p>
+            <p className="truncate ...">{documentToPlainTextString(content)}</p>
+            <Link className="underline" href={url}>
+              Selengkapnya
+            </Link>
           </div>
         </div>
       </div>

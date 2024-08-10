@@ -7,10 +7,11 @@ export type BlogItem = {
         slug: string;
         date: Date;
         content: Document;
+        cover: any;
     }
 }
 export type BlogItems = ReadonlyArray<BlogItem>;
 
 export type BlogQueryResult = {
     items: BlogItems;
-}
+}   

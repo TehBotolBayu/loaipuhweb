@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^16.2.8",
     "@contentful/rich-text-react-renderer": "^15.22.9",
     "@types/geojson": "^7946.0.14",
     "contentful": "^10.12.15",
