@@ -6,8 +6,8 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 const MapComponent = () => {
   return (
     <MapContainer
-      center={[-0.423112, 116.953489]}
-      zoom={300}
+      center={[-0.4573966, 116.8904821]}
+      zoom={15}
       scrollWheelZoom={false}
       className='z-10 h-[70vh] lg:h-[50vh] w-full'
     >

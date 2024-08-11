@@ -1,38 +1,23 @@
 import { useState, useEffect } from "react";
 import logo from "/public/logo.png";
 import logo_i from "/public/logo-invert.png";
+import Link from "next/link";
 
 const Navbar = () => {
-  const [win, setWindow] = useState<any>(0);
   const [openNavBar, setopenNavBar] = useState(false);
 
-  useEffect(() => {
-    const handle = () => {
-      setWindow(window.scrollY);
-    };
-    window.addEventListener("scroll", handle);
-    return () => {
-      window.removeEventListener("scroll", handle);
-    };
-  }, []);
   return (
-    <nav
-      id="header"
-      className={`fixed w-full z-30 top-0 text-white
-        ${win > 10 ? "bg-white" : ""} `}
-    >
+    <nav id="header" className={`fixed w-full z-30 top-0 text-white bg-white`}>
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
-          <a
-            className={`toggleColour ${
-              win > 10 ? "text-black" : "text-white"
-            }  no-underline hover:no-underline font-bold text-2xl lg:text-4xl
+          <Link
+            className={`toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl
               flex items-center`}
-            href="#"
+            href="/"
           >
-            <img src={win > 10 ? logo_i.src : logo.src} alt="" className="w-14" />
+            <img src={logo_i.src} alt="" className="w-14" />
             <p className="ml-4">LOAIPUH</p>
-          </a>
+          </Link>
         </div>
         <div className="block lg:hidden pr-4">
           <button
@@ -57,30 +42,30 @@ const Navbar = () => {
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
-            <li className="mr-3">
-              <a
-                className="inline-block py-2 px-4 text-black font-bold no-underline"
-                href="#"
+            <div className="mr-3">
+              <Link
+                className="inline-block py-2 px-4 text-black no-underline hover:text-gray-800 hover:text-underline"
+                href="/artikel"
               >
                 Artikel
-              </a>
-            </li>
-            <li className="mr-3">
-              <a
+              </Link>
+            </div>
+            <div className="mr-3">
+              <Link
                 className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
+                href="/layanan"
               >
                 Layanan
-              </a>
-            </li>
-            <li className="mr-3">
-              <a
+              </Link>
+            </div>
+            <div className="mr-3">
+              <Link
                 className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
+                href="/galeri"
               >
-                Program Kerja
-              </a>
-            </li>
+                Galeri
+              </Link>
+            </div>
           </ul>
           {/* <button
               id="navAction"
