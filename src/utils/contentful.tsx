@@ -76,12 +76,6 @@ const getBlogBySlug = async (slug: string) => {
       limit: 1,
       include: 10,
     });
-    if (result.items.length > 0) {
-      console.log("Entry found:", result.items[0]);
-    } else {
-      console.log("No entry found with that slug.");
-    }
-    console.log("aman", result);
     return result;
   } catch (error) {
     console.log(error);
@@ -89,4 +83,40 @@ const getBlogBySlug = async (slug: string) => {
   }
 };
 
-export { getBlogEntries, getBlogBySlug, renderOptions };
+const getGalleryBySlug = async (slug: string) => {
+  try {
+    const result = await client.getEntries({
+      content_type: "galeri", // Replace with your content type ID
+      "fields.slug": slug, // Replace with the slug you're searching for
+      limit: 1,
+      include: 10,
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
+const getInfoBySlug = async (slug: string) => {
+  try {
+    const result = await client.getEntries({
+      content_type: "informasidesa", // Replace with your content type ID
+      "fields.slug": slug, // Replace with the slug you're searching for
+      limit: 1,
+      include: 10,
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
+const getInfoEntries = async () => {
+  const entries = await client.getEntries({ content_type: "informasidesa" });
+  return entries;
+};
+
+
+export { getBlogEntries, getBlogBySlug, getInfoEntries, renderOptions, getInfoBySlug, getGalleryBySlug };

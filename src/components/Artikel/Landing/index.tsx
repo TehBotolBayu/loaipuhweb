@@ -17,7 +17,6 @@ export default function Artikel({
         <div className="mt-14 flex flex-wrap">
           {blogEntries.items.map((singlePost) => {
             const { slug, title, date, content } = singlePost.fields;
-            console.log("singlePost.fields", singlePost.fields);
             return (
               <div key={slug} className="w-full md:w-1/3 p-2">
                 <ArticleCard

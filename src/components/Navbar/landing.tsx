@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import logo from "/public/logo.png";
-import logo_i from "/public/logo-invert.png";
+import logo from "/public/Lambang_Kab._Kutai_Kertanegara.png";
+import logo_i from "/public/Lambang_Kab._Kutai_Kertanegara.png";
 import Link from "next/link";
+import { navigasiData } from "@/constant/artikel";
 
 const Navbar = () => {
   const [win, setWindow] = useState<any>(0);
@@ -30,7 +31,7 @@ const Navbar = () => {
             href="/"
           >
             <img src={logo_i.src} alt="" className="w-14" />
-            <p className="ml-4">LOAIPUH</p>
+            <p className="ml-4">LOAIPUH DARAT</p>
           </Link>
         </div>
         <div className="block lg:hidden pr-4">
@@ -56,30 +57,17 @@ const Navbar = () => {
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
-            <div className="mr-3">
-              <a
-                className="inline-block py-2 px-4 text-black no-underline hover:text-gray-800 hover:text-underline"
-                href="#artikel"
-              >
-                Artikel
-              </a>
-            </div>
-            <div className="mr-3">
-              <a
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#layanan"
-              >
-                Layanan
-              </a>
-            </div>
-            <div className="mr-3">
-              <a
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#galeri"
-              >
-                Galeri
-              </a>
-            </div>
+            {
+              navigasiData.map((e:any, i:number) =>
+                <div className="mr-3" key={i}>
+                  <a
+                    className="inline-block py-2 px-4 text-black no-underline hover:text-gray-800 hover:text-underline"
+                    href={e.url}
+                  >
+                    {e.nama}
+                  </a>
+                </div>
+              )}
           </ul>
           {/* <button
               id="navAction"
