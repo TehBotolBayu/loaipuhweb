@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import logo from "/public/logo.png";
-import logo_i from "/public/logo-invert.png";
+import logo from "/public/Lambang_Kab._Kutai_Kertanegara.png";
+import logo_i from "/public/Lambang_Kab._Kutai_Kertanegara.png";
 import Link from "next/link";
+import { navigasiData } from "@/constant/artikel";
 
 const Navbar = () => {
   const [openNavBar, setopenNavBar] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
             href="/"
           >
             <img src={logo_i.src} alt="" className="w-14" />
-            <p className="ml-4">LOAIPUH</p>
+            <p className="ml-4">LOAIPUH DARAT</p>
           </Link>
         </div>
         <div className="block lg:hidden pr-4">
@@ -42,38 +43,19 @@ const Navbar = () => {
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
-            <div className="mr-3">
-              <Link
-                className="inline-block py-2 px-4 text-black no-underline hover:text-gray-800 hover:text-underline"
-                href="/artikel"
-              >
-                Artikel
-              </Link>
-            </div>
-            <div className="mr-3">
-              <Link
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="/layanan"
-              >
-                Layanan
-              </Link>
-            </div>
-            <div className="mr-3">
-              <Link
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="/galeri"
-              >
-                Galeri
-              </Link>
-            </div>
+            {
+              navigasiData.map((e:any, i:number) =>
+                <div className="mr-3" key={i}>
+                  <Link
+                    className="inline-block py-2 px-4 text-black no-underline hover:text-gray-800 hover:text-underline"
+                    href={e.url}
+                  >
+                    {e.nama}
+                  </Link>
+                </div>
+              )
+            }
           </ul>
-          {/* <button
-              id="navAction"
-              className={`mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out
-                ${(win > 10)?'gradient text-white':''}`}
-            >
-              Action
-            </button> */}
         </div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />

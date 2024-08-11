@@ -20,12 +20,11 @@ export default function Home({
   blogEntries: BlogQueryResult;
 }) {
   return (
-    <div className="leading-normal tracking-normal text-white gradient absolute w-screen z-[-1]">
+    <>
       <SEO
         title="Website Desa Loa Ipuh Kutai Kartanegara Kalimantan Timur"
         description="Dapatkan informasi dan layanan publik apapun seputar Desa Loa Ipuh melalui website ini."
       />
-      <Navbar />
       <Hero />
       {/* kata */}
       <Introduction />
@@ -37,15 +36,12 @@ export default function Home({
       <GallerySection />
       {/* Map */}
       <MapSection />
-      {/* Footer */}
-      <Footer />
-    </div>
+    </>
   );
 }
 
 export async function getServerSideProps() {
   const blogEntries = await getBlogEntries();
-  // console.log("blogResult", blogEntries.items[0].fields.content);
 
   return {
     props: {
