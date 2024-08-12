@@ -16,17 +16,17 @@ const index = ({
       <div className="flex min-h-screen flex-col p-24 gap-y-8 max-w-screen-md lg:px-0 mx-auto">
         <h1 className="text-center">Informasi Kelurahan Loa Ipuh</h1>
         {
-          content.items.slice(0).reverse().map((e:any, i:number) => {
+          content.items.slice(0).reverse().map((e: any, i: number) => {
             return (
               <div key={i}>
                 <h1>{e.fields.title}</h1>
-      <div className="flex flex-col gap-y-8  lg:px-0 mx-auto">
+                <div className="flex flex-col gap-y-8  lg:px-0 mx-auto">
 
-                {
+                  {
 
-                  documentToReactComponents(e.fields.content, renderOptions)
-                }
-              </div>
+                    documentToReactComponents(e.fields.content, renderOptions)
+                  }
+                </div>
               </div>
             )
           })
@@ -43,6 +43,6 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       content
-    },
+    }, revalidate: 10
   };
 }
