@@ -54,5 +54,6 @@ export async function getStaticProps(context: any) {
       title: blog.items[0].fields.title,
       cover: blog.items[0].fields?.cover?.fields.file.url || "",
     },
+    revalidate: 10
   };
 }

@@ -33,5 +33,6 @@ export async function getStaticProps(context: any) {
       blog: blog.items[0],
       title: blog.items[0].fields.title,
     },
+    revalidate: 10
   };
 }
