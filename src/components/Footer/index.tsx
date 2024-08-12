@@ -1,9 +1,9 @@
-import logo from '/public/logo.png'
+import logo from '/public/Lambang_Kab._Kutai_Kertanegara.png'
 
 const Footer = () => {
   return (
     <>
-          <svg
+      <svg
         className="wave-top"
         viewBox="0 0 1439 147"
         version="1.1"
@@ -12,7 +12,7 @@ const Footer = () => {
       >
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
           <g transform="translate(-1.000000, -14.000000)" fillRule="nonzero">
-            <g className="wave" fill="#f8fafc">
+            <g className="wave" fill="#f3f4f6">
               <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z" />
             </g>
             <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
@@ -35,7 +35,7 @@ const Footer = () => {
         </g>
       </svg>
       <section className="container mx-auto text-center py-6 mb-12 mt-20">
-        <img src="logo-white.png" alt=""  className="mx-auto"/>
+        <img src="logo-white.png" alt="" className="mx-auto" />
       </section>
       {/*Footer*/}
       <footer className="h-[50vh]">
@@ -46,8 +46,8 @@ const Footer = () => {
                 className="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                 href="#"
               >
-              <img src={logo.src} alt="" className="w-14" />
-              <p className="">LOAIPUH</p>
+                <img src={logo.src} alt="" className="w-14" />
+                <p className="">LOAIPUH DARAT</p>
               </a>
             </div>
             <div className="flex-1">

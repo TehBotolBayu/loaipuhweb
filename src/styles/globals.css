@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
@@ -17,4 +21,52 @@
   background-size: cover;
   opacity: 0.3;
   /* background-size: 100vw 100vh; */
+}
+
+h1{
+  @apply font-bold text-3xl my-4
+}
+h2{
+  @apply font-bold text-2xl my-2
+}
+h3{
+  @apply font-bold text-xl my-2
+}
+h4{
+  @apply font-bold text-lg my-2
+}
+h5{
+  @apply font-bold text-base my-2
+}
+h6{
+  @apply font-bold text-base my-2
+}
+
+table{
+  @apply bg-white text-black min-w-full text-left text-sm font-light dark:text-white
+}
+
+thead{
+  @apply border-b border-neutral-200 font-medium dark:border-white/10
+}
+
+tr{
+  @apply border-b border-neutral-200 dark:border-white/10
+}
+
+th{
+  @apply px-6 py-3 font-bold
+}
+
+td{
+  @apply whitespace-nowrap px-6 py-4
+}
+
+
+ul {
+  @apply list-disc
+}
+
+ol {
+  @apply list-decimal
 }
