@@ -44,7 +44,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getServerSideProps(context: any) { 
+export async function getStaticProps(context: any) {
   const slug = context.params.slug;
   const blog: any = await getBlogBySlug(slug);
 
@@ -54,5 +54,6 @@ export async function getServerSideProps(context: any) {
       title: blog.items[0].fields.title,
       cover: blog.items[0].fields?.cover?.fields.file.url || "",
     },
+    revalidate: 10
   };
 }

@@ -25,7 +25,7 @@ const index = ({
 
 export default index;
 
-export async function getServerProps(context: any) {
+export async function getStaticProps(context: any) {
   const slug = 'main';
   const blog: any = await getGalleryBySlug(slug);
   return {
@@ -33,5 +33,6 @@ export async function getServerProps(context: any) {
       blog: blog.items[0],
       title: blog.items[0].fields.title,
     },
+    revalidate: 10
   };
 }
