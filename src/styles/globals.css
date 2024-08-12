@@ -43,15 +43,15 @@ h6{
 }
 
 table{
-  @apply bg-white text-black min-w-full text-left text-sm font-light dark:text-white
+  @apply bg-white text-black min-w-full text-left text-sm font-light 
 }
 
 thead{
-  @apply border-b border-neutral-200 font-medium dark:border-white/10
+  @apply border-b border-neutral-200 font-medium 
 }
 
 tr{
-  @apply border-b border-neutral-200 dark:border-white/10
+  @apply border-b border-neutral-200 
 }
 
 th{
