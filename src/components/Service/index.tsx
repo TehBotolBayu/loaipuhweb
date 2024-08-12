@@ -21,7 +21,7 @@ const Service = () => {
               </div>
               <p className="text-gray-800 text-base px-6 mb-5">
                 Melalui website ini warga setempat dapat melihat berbagai
-                informasi berupa artikel mengenai perkembangan desa loa ipuh
+                informasi berupa artikel mengenai perkembangan desa loa ipuh darat
               </p>
             </a>
           </div>

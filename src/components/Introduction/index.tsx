@@ -12,7 +12,7 @@ const Introduction = () => {
             <p className="my-4">Assalamualaikum warahmatullahi wabarakatuh,</p>
             <p>Salam sejahtera untuk kita semua,</p>
             <p className="my-4">
-              Saya dengan bangga memperkenalkan website resmi Desa Loa Ipuh.
+              Saya dengan bangga memperkenalkan website resmi Desa Loa Ipuh Darat.
               Website ini dibuat untuk meningkatkan transparansi, pelayanan
               publik, dan komunikasi antara pemerintah desa dan masyarakat.
               Melalui website ini, Bapak/Ibu dapat mengakses informasi desa,

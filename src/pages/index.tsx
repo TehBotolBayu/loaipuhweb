@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <div className="leading-normal tracking-normal text-white gradient absolute w-screen z-[-1]">
       <SEO
-        title="Website Desa Loa Ipuh Kutai Kartanegara Kalimantan Timur"
-        description="Dapatkan informasi dan layanan publik apapun seputar Desa Loa Ipuh melalui website ini."
+        title="Website Desa Loa Ipuh Darat Kutai Kartanegara Kalimantan Timur"
+        description="Dapatkan informasi dan layanan publik apapun seputar Desa Loa Ipuh Darat melalui website ini."
       />
       <Navbar />
       <Hero />
