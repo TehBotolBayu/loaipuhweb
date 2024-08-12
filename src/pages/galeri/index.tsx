@@ -25,7 +25,7 @@ const index = ({
 
 export default index;
 
-export async function getStaticProps(context: any) {
+export async function getServerProps(context: any) {
   const slug = 'main';
   const blog: any = await getGalleryBySlug(slug);
   return {

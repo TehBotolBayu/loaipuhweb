@@ -44,7 +44,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context: any) {
+export async function getServerSideProps(context: any) { 
   const slug = context.params.slug;
   const blog: any = await getBlogBySlug(slug);
 
