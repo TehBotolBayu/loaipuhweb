@@ -29,22 +29,22 @@ const index = ({
 
 export default index;
 
-export async function getStaticPaths() {
-  const blogEntries = await getBlogEntries();
+// export async function getStaticPaths() {
+//   const blogEntries = await getBlogEntries();
 
-  const paths = blogEntries.items.map((singlePost) => {
-    const { slug } = singlePost.fields;
-    return { params: { slug } };
-  });
+//   const paths = blogEntries.items.map((singlePost) => {
+//     const { slug } = singlePost.fields;
+//     return { params: { slug } };
+//   });
 
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps(context: any) {
+export async function getServerSideProps(context: any) {
   const slug = context.params.slug;
   const blog: any = await getBlogBySlug(slug);
 
@@ -53,7 +53,6 @@ export async function getStaticProps(context: any) {
       blog: blog.items[0],
       title: blog.items[0].fields.title,
       cover: blog.items[0].fields?.cover?.fields.file.url || "",
-    },
-    revalidate: 10
+    }
   };
 }
