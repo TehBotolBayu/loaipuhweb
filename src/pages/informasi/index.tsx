@@ -19,8 +19,9 @@ const index = ({
           content.items.slice(0).reverse().map((e: any, i: number) => {
             return (
               <div key={i}>
+    <div className="flex min-h-screen flex-col lg:p-24 p-4 gap-y-8 max-w-screen-md lg:px-0 mx-auto">
+                
                 <h1>{e.fields.title}</h1>
-                <div className="flex flex-col gap-y-8  lg:px-0 mx-auto">
 
                   {
 

@@ -10,7 +10,7 @@ export default function Home({
   blogEntries: BlogQueryResult;
 }) {
   return (
-    <article className="flex min-h-screen bg-white flex-col p-24 gap-y-8">
+    <article className="flex min-h-screen bg-white flex-col p-2 py-24 lg:p-24 gap-y-8">
       <Artikel blogEntries={blogEntries} />
     </article>
   );

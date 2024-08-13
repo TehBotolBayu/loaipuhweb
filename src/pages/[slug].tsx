@@ -18,7 +18,7 @@ const index = ({
 }) => {
   return (
     <div className="bg-[#f8fafc] w-full text-black mt-20">
-    <div className="flex min-h-screen flex-col p-24 gap-y-8 max-w-screen-md lg:px-0 mx-auto">
+    <div className="flex min-h-screen flex-col lg:p-24 p-4 gap-y-8 max-w-screen-md lg:px-0 mx-auto">
       <h1>{title}</h1>
       {cover && <img src={`https:${cover}`} />}
       {documentToReactComponents(blog.fields.content, renderOptions)}
