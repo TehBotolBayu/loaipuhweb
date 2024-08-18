@@ -12,12 +12,12 @@ const Navbar = () => {
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
           <Link
-            className={`toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl
+            className={`toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-3xl
               flex items-center`}
             href="/"
           >
             <img src={logo_i.src} alt="" className="w-14" />
-            <p className="ml-4">LOAIPUH DARAT</p>
+            <p className="ml-4">LOAIPUHDARAT</p>
           </Link>
         </div>
         <div className="block lg:hidden pr-4">

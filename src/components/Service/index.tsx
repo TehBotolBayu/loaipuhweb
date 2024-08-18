@@ -17,11 +17,11 @@ const Service = () => {
             >
               <img src={layananA.src} className="w-32 m-auto my-4" />
               <div className="w-full font-bold text-xl text-gray-800 px-6">
-                Informasi kelurahan
+                Informasi Desa
               </div>
               <p className="text-gray-800 text-base px-6 mb-5">
                 Melalui website ini warga setempat dapat melihat berbagai
-                informasi berupa artikel mengenai perkembangan kelurahan loa ipuh darat
+                informasi berupa artikel mengenai perkembangan desa loa ipuh darat
               </p>
             </div>
           </div>

@@ -14,7 +14,7 @@ const MapSection = () => {
   return (
     <section className="bg-gray-100 py-8">
       <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <SectionTitle text="Peta kelurahan" opt={undefined} />
+        <SectionTitle text="Peta Desa" opt={undefined} />
         <div className="mt-14"></div>
         <MapComponent />
       </div>

@@ -16,7 +16,7 @@ const navigasiData = [
         url: '/visimisi'
     },
     {
-        nama: 'Informasi kelurahan',
+        nama: 'Informasi Desa',
         url: '/informasi'
     },
     {
