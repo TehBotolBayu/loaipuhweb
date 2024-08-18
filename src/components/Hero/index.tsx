@@ -9,14 +9,14 @@ const Hero = () => {
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <div className="bg-heroimage w-screen h-[120vh] absolute top-0 right-0 z-[-1]"></div>
             <p className="uppercase tracking-loose w-full z-10">
-              PEMERINTAH DESA LOA IPUH DARAT KUTAI KARTANEGARA
+              PEMERINTAH kelurahan LOA IPUH DARAT KUTAI KARTANEGARA
             </p>
             <h1 className="my-4 text-5xl font-bold leading-tight z-10">
               Menjawab Kebutuhan Informasi Masyarakat
             </h1>
             <p className="leading-normal text-2xl mb-8 z-10">
-              Selamat datang di Portal Desa Loa Ipuh Darat, Dapatkan informasi dan
-              layanan publik apapun seputar Desa Loa Ipuh Darat melalui website ini.
+              Selamat datang di Portal kelurahan Loa Ipuh Darat, Dapatkan informasi dan
+              layanan publik apapun seputar kelurahan Loa Ipuh Darat melalui website ini.
             </p>
             <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
               Layanan Kami
