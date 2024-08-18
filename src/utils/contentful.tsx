@@ -101,7 +101,7 @@ const getGalleryBySlug = async (slug: string) => {
 const getInfoBySlug = async (slug: string) => {
   try {
     const result = await client.getEntries({
-      content_type: "informasikelurahan", // Replace with your content type ID
+      content_type: "informasidesa", // Replace with your content type ID
       "fields.slug": slug, // Replace with the slug you're searching for
       limit: 1,
       include: 10,
@@ -129,7 +129,7 @@ const getTableData = async (slug: string) => {
 };
 
 const getInfoEntries = async () => {
-  const entries = await client.getEntries({ content_type: "informasikelurahan" });
+  const entries = await client.getEntries({ content_type: "informasidesa" });
   return entries;
 };
 
