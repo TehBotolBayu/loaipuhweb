@@ -113,10 +113,25 @@ const getInfoBySlug = async (slug: string) => {
   }
 };
 
+const getTableData = async (slug: string) => {
+  try {
+    const result = await client.getEntries({
+      content_type: "tableData", // Replace with your content type ID
+      "fields.slug": slug, // Replace with the slug you're searching for
+      limit: 1,
+      include: 10,
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
 const getInfoEntries = async () => {
   const entries = await client.getEntries({ content_type: "informasidesa" });
   return entries;
 };
 
 
-export { getBlogEntries, getBlogBySlug, getInfoEntries, renderOptions, getInfoBySlug, getGalleryBySlug };
+export { getBlogEntries, getBlogBySlug, getInfoEntries, renderOptions, getInfoBySlug, getGalleryBySlug, getTableData };
